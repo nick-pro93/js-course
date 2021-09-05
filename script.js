@@ -59,8 +59,8 @@ if (num < 49) {
     console.log('Ok!');
 }
 
-const num = 50;
-(num === 50) ? console.log('Ok!') : console.log('Error');
+const nUm = 50;
+(nUm === 50) ? console.log('Ok!') : console.log('Error');
 
 const num1=177;
 
@@ -72,7 +72,7 @@ switch (num1) {
         console.log ('Неверно');
         break;
     case 50:
-        console.log ("В точку!")
+        console.log ("В точку!");
         break;
     default:
         console.log ('Не в этот раз');
