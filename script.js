@@ -78,3 +78,25 @@ switch (num1) {
         console.log ('Не в этот раз');
         break;
 }
+
+let num2 = 50;
+
+// while (num2 < 55) {
+//     console.log(num2);
+//     num2++;
+// }
+
+// do {
+//     console.log(num2);
+//     num2++;
+// }
+// while (num2 < 55);
+
+for (let i = 1; i < 8; i++) {
+    if (i === 6) {
+        // break;  остановка цикла
+        continue;  // продолжение цикла с пропуском значения if
+    }
+
+    console.log(i);
+}
