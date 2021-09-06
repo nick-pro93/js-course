@@ -33,75 +33,26 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
 for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
-    personalMovieDB.movies[a] = b;
+
+    if (a != null && b != null && a != '' && b != '' && a.lenth < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+}
+
+if (personalMovieDB.count < 10){
+    console.log('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.cont < 30) {
+    console.log('Вы классический зритель');
+} else if (personalMovieDB.count >= 30) {
+    console.log('Вы киноман');
+} else {
+    console.log('Произошла ошибка');
 }
 console.log(personalMovieDB);
-
-if (4 == 4) {
-    console.log('Ok!');
-} else {
-    console.log('Error');
-}
-
-const num = 101;
-
-if (num < 49) {
-    console.log('Error');
-} else if (num > 100) {
-    console.log('Много');
-} else {
-    console.log('Ok!');
-}
-
-const nUm = 50;
-(nUm === 50) ? console.log('Ok!') : console.log('Error');
-
-const num1=177;
-
-switch (num1) {
-    case 49:
-        console.log ('Неверно');
-        break;
-    case 100:
-        console.log ('Неверно');
-        break;
-    case 50:
-        console.log ("В точку!");
-        break;
-    default:
-        console.log ('Не в этот раз');
-        break;
-}
-
-let num2 = 50;
-
-// while (num2 < 55) {
-//     console.log(num2);
-//     num2++;
-// }
-
-// do {
-//     console.log(num2);
-//     num2++;
-// }
-// while (num2 < 55);
-
-for (let i = 1; i < 8; i++) {
-    if (i === 6) {
-        // break;  остановка цикла
-        continue;  // продолжение цикла с пропуском значения if
-    }
-
-    console.log(i);
-}
